@@ -60,15 +60,7 @@ const Auth = ({ modal, setModal }) => {
                 {createUser ? "Join Medium" : "Welcome Back"}
               </h2>
               <div className="flex flex-col gap-2 w-fit mx-auto">
-                <Button
-                  click={googleAuth}
-                  icon={<FcGoogle className="text-xl" />}
-                  text={`${createUser ? "Sign Up" : "Sign In"} With Google`}
-                />
-                <Button
-                  icon={<MdFacebook className="text-xl text-blue-600" />}
-                  text={`${createUser ? "Sign Up" : "Sign In"} With Facebook`}
-                />
+                {/*  */}
                 <Button
                   click={() => setSignReq(createUser ? "sign-up" : "sign-in")}
                   icon={<AiOutlineMail className="text-xl" />}

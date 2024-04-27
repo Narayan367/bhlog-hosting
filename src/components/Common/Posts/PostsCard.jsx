@@ -16,14 +16,14 @@ const PostsCard = ({ post }) => {
     <section>
       <div
         onClick={() => navigate(`/post/${postId}`)}
-        className="flex flex-col sm:flex-row gap-4 cursor-pointer">
+        className="flex flex-col sm:flex-row gap-4 cursor-pointer ">
         <div className="flex-[2.5]">
           <p className="pb-2 font-semibold capitalize">{username}</p>
           <h2 className="text-xl font-bold line-clamp-2 leading-6 capitalize">
             {title}
           </h2>
           <div
-            className="py-1 text-gray-500 line-clamp-2 leading-5"
+            className="py-[2px] text-gray-500 line-clamp-2 leading-5"
             dangerouslySetInnerHTML={{ __html: desc }}
           />
         </div>
@@ -42,13 +42,14 @@ const PostsCard = ({ post }) => {
           {readTime({ __html: desc })} min read .
           {moment(created).format("MMM DD")}
         </p>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 pt-2">
           <SavedPost post={post} />
           {currentUser?.uid === userId && (
             <Actions postId={postId} title={title} desc={desc} />
           )}
         </div>
       </div>
+      <hr />
     </section>
   );
 };
