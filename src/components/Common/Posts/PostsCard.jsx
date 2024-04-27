@@ -14,6 +14,8 @@ const PostsCard = ({ post }) => {
 
   return (
     <section>
+      <div className="flex">
+
       <div
         onClick={() => navigate(`/post/${postId}`)}
         className="flex flex-col sm:flex-row gap-4 cursor-pointer ">
@@ -23,19 +25,20 @@ const PostsCard = ({ post }) => {
             {title}
           </h2>
           <div
-            className="py-[2px] text-gray-500 line-clamp-2 leading-5"
+            className="py-[2px] text-gray-500 line-clamp-2 leading-5 w-[500px]"
             dangerouslySetInnerHTML={{ __html: desc }}
           />
         </div>
         {postImg && (
-          <div className="flex-[1]">
+          <div className=" ">
             <img
               src={postImg}
               alt="postImg"
-              className="w-[53rem] h-[8rem] object-cover"
+              className="h-[8rem] object-cover"
             />
           </div>
         )}
+      </div>
       </div>
       <div className="flex items-center justify-between w-full md:w-[70%] mt-[2rem] md:mt-0">
         <p className="text-xs text-gray-600">
