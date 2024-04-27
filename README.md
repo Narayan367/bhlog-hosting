@@ -1,7 +1,7 @@
 
 ## Full stack Medium Blog clone using React JS, Tailwind css, Firebase.
 
-<img src="./public/mediumBanner.png" alt="banner-image"/>
+
 
 
 
